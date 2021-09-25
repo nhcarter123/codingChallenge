@@ -1,5 +1,11 @@
 # Highest Scores
 ​
+### Getting Started:
+​
+The script can be run using the following:
+```
+node highest "highest score_recs.data" 5
+```
 ### Problem Text:
 ​
 Given a data file containing scored records, in your favorite
