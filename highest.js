@@ -27,10 +27,10 @@ const main = async () => {
 const printOutput = (array) => {
     console.log('[')
     for (const line of array) {
-        console.log('\t{')
-        console.log(`\t\t"score": ${line.score},`);
-        console.log(`\t\t"id": "${line.id}"`);
-        console.log('\t}')
+        console.log('    {')
+        console.log(`         "score": ${line.score},`);
+        console.log(`         "id": "${line.id}"`);
+        console.log('    }')
     }
     console.log(']')
 }
