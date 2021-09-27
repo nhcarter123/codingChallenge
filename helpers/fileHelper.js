@@ -19,7 +19,7 @@ class FileHelper {
         }
     }
 
-    static async readFile(filepath, limit) {
+    static async readFile(filepath) {
         return new Promise((resolve) => {
             let index = 0;
             const lines = [];
@@ -33,11 +33,6 @@ class FileHelper {
 
                 lines.push(data);
                 index++;
-
-                if (index >= limit) {
-                    readInterface.close();
-                    readInterface.removeAllListeners();
-                }
             });
 
             readInterface.on("close", () => resolve(lines));
