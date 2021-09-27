@@ -26,11 +26,16 @@ const main = async () => {
 
 const printOutput = (array) => {
     console.log('[')
-    for (const line of array) {
+    for (let i=0; i< array.length; i++) {
+        const item = array[i];
         console.log('    {')
-        console.log(`         "score": ${line.score},`);
-        console.log(`         "id": "${line.id}"`);
-        console.log('    }')
+        console.log(`         "score": ${item.score},`);
+        console.log(`         "id": "${item.id}"`);
+        if (i === array.length - 1) {
+            console.log('    }')
+        } else {
+            console.log('    },')
+        }
     }
     console.log(']')
 }
